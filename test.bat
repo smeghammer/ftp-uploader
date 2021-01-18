@@ -1,0 +1,3 @@
+echo starting...
+python "C:\Work\FTP Uploader\start.py" -f "%1"
+pause

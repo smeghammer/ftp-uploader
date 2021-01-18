@@ -8,6 +8,7 @@ see https://www.devdungeon.com/content/python-ftp-client-tutorial#toc-16
 import argparse
 import importlib
 from ftplib import FTP
+import os
 
 
 '''
@@ -40,11 +41,12 @@ def test(file):
     # ftp.cwd('Documents')
     
     res = ftp.retrlines('LIST')
-    
+    print(res)
     #text mode
     with open(file, 'rb') as text_file:
 #         ftp.storlines('STOR '+file, text_file)
-        ftp.storbinary('STOR '+file, text_file)
+        print(file.split('\\')[-1])
+        ftp.storbinary('STOR '+file.split(os.path.sep)[-1], text_file)
     
     
     ftp.quit()
