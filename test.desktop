@@ -1,4 +1,4 @@
 [Desktop Entry]
 Name=Drop Over Me
-Exec=gnome-terminal -e "/home/silas/Deploy/ftp-uploader/FTP\ Uploader/test.sh %U"
+Exec=gnome-terminal -e "/home/silas/Deploy/ftp-uploader/test.sh %U"
 Type=Application

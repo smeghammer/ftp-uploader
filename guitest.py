@@ -4,6 +4,8 @@ Created on 18 Jan 2021
 @author: silas
 '''
 from PySide import QtGui, QtCore
+import sys
+from ftplib import FTP
 
 class MainWindowWidget(QtGui.QWidget):
     """
@@ -39,6 +41,44 @@ class MainWindowWidget(QtGui.QWidget):
 
         self.show()
 
+
+    def upload(self):
+        print(self.fname) 
+        
+        '''
+        for ID Games:
+        '''
+        # ftp = FTP('archives.gamers.org','anonymous','smeghammer@live.com')
+        # ftp.cwd('pub/idgames/incoming')
+        
+        '''
+        local
+        '''
+        ftp = FTP('192.168.1.106','silas','%Asteroth666%')
+        ftp.cwd('/home/silas/ftp')
+#         ftp = FTP('192.168.1.106')
+#         ftp.login()
+#         ftp.cwd('/home/silas/mapftp')
+        #/home/silas/Documents
+        
+        # ftp.cwd('Documents')
+        
+        res = ftp.retrlines('LIST')
+        print(res)
+        #text mode
+        with open(self.fname, 'rb') as text_file:
+            try:
+        #         ftp.storlines('STOR '+file, text_file)
+                ftp.storbinary('STOR '+self.fname, text_file)
+            except Exception as ex:
+                print(ex)
+        
+        ftp.quit()
+
+
+
+
+
     def load_image_but(self):
         """
         Open a File dialog when the button is pressed
@@ -48,7 +88,10 @@ class MainWindowWidget(QtGui.QWidget):
         #Get the file location
         self.fname, _ = QtGui.QFileDialog.getOpenFileName(self, 'Open file')
         # Load the image from the location
-        self.load_image()
+#         self.load_image()
+
+#             self.load_image()
+        self.upload()
 
     def load_image(self):
         """
@@ -84,13 +127,15 @@ class MainWindowWidget(QtGui.QWidget):
             e.accept()
             # Workaround for OSx dragging and dropping
             for url in e.mimeData().urls():
-                if op_sys == 'Darwin':
-                    fname = str(NSURL.URLWithString_(str(url.toString())).filePathURL().path())
-                else:
-                    fname = str(url.toLocalFile())
+#                 if op_sys == 'Darwin':
+#                     fname = str(NSURL.URLWithString_(str(url.toString())).filePathURL().path())
+#                 else:
+#                     fname = str(url.toLocalFile())
+                fname = str(url.toLocalFile())
 
             self.fname = fname
-            self.load_image()
+#             self.load_image()
+            self.upload()
         else:
             e.ignore()
 

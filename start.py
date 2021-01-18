@@ -32,6 +32,9 @@ def test(file):
     '''
     ftp = FTP('192.168.1.106','silas','%Asteroth666%')
     ftp.cwd('/home/silas/ftp')
+#     ftp = FTP('192.168.1.106')
+#     ftp.login()
+#     ftp.cwd('/home/silas/mapftp')
     #/home/silas/Documents
     
     # ftp.cwd('Documents')
