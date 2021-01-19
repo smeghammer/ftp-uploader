@@ -5,6 +5,7 @@ Created on 18 Jan 2021
 '''
 from PySide import QtGui, QtCore
 import sys
+import os
 from ftplib import FTP
 
 class MainWindowWidget(QtGui.QWidget):
@@ -69,7 +70,7 @@ class MainWindowWidget(QtGui.QWidget):
         with open(self.fname, 'rb') as text_file:
             try:
         #         ftp.storlines('STOR '+file, text_file)
-                ftp.storbinary('STOR '+self.fname, text_file)
+                ftp.storbinary('STOR '+self.fname.split(os.path.sep)[-1], text_file)
             except Exception as ex:
                 print(ex)
         
