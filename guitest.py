@@ -1,11 +1,12 @@
 '''
 Created on 18 Jan 2021
 
-@author: silas
+@author: smeghammer
 '''
-from PySide import QtGui, QtCore
+
 import sys
 import os
+from PySide import QtGui, QtCore
 from ftplib import FTP
 
 class MainWindowWidget(QtGui.QWidget):
@@ -49,20 +50,8 @@ class MainWindowWidget(QtGui.QWidget):
         '''
         for ID Games:
         '''
-        # ftp = FTP('archives.gamers.org','anonymous','smeghammer@live.com')
-        # ftp.cwd('pub/idgames/incoming')
-        
-        '''
-        local
-        '''
-        ftp = FTP('192.168.1.106','silas','%Asteroth666%')
-        ftp.cwd('/home/silas/ftp')
-#         ftp = FTP('192.168.1.106')
-#         ftp.login()
-#         ftp.cwd('/home/silas/mapftp')
-        #/home/silas/Documents
-        
-        # ftp.cwd('Documents')
+        ftp = FTP('archives.gamers.org','anonymous','smeghammer@live.com')
+        ftp.cwd('pub/idgames/incoming')
         
         res = ftp.retrlines('LIST')
         print(res)

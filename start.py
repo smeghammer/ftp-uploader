@@ -1,7 +1,7 @@
 '''
 Created on 9 Jan 2021
 
-@author: smegh
+@author: smeghammer
 
 see https://www.devdungeon.com/content/python-ftp-client-tutorial#toc-16
 '''
@@ -25,20 +25,10 @@ def test(file):
     '''
     for ID Games:
     '''
-    # ftp = FTP('archives.gamers.org','anonymous','smeghammer@live.com')
-    # ftp.cwd('pub/idgames/incoming')
+    ftp = FTP('archives.gamers.org','anonymous','your_email@your_host.com')
+    ftp.cwd('pub/idgames/incoming')
     
-    '''
-    local
-    '''
-    ftp = FTP('192.168.1.106','silas','%Asteroth666%')
-    ftp.cwd('/home/silas/ftp')
-#     ftp = FTP('192.168.1.106')
-#     ftp.login()
-#     ftp.cwd('/home/silas/mapftp')
-    #/home/silas/Documents
-    
-    # ftp.cwd('Documents')
+
     
     res = ftp.retrlines('LIST')
     print(res)
@@ -47,8 +37,7 @@ def test(file):
 #         ftp.storlines('STOR '+file, text_file)
         print(file.split('\\')[-1])
         ftp.storbinary('STOR '+file.split(os.path.sep)[-1], text_file)
-    
-    
+ 
     ftp.quit()
 
 '''
