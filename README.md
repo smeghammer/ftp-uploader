@@ -46,14 +46,16 @@ The renamed `config.ini` needs to be updated to include your email as the `pass=
 All other values should be OK for uploading to the IDGames archive.
 
 ### Windows
-1: Install Python 3 from [here](https://www.python.org/downloads/windows/). Once done, check that you can open a python CLI prompt by typing `python` in a terminal window. If you get a bunch of text indicating the python version, then you are good to go (note it may have installed as `python3` if python2 is already installed). 
-2: Make sure you amend the batch file to use the correct python alias (`python` most likely) and the path bit (before `\start.py -f "%1"`) to wherever you deployed the code 
-3: Create a desktop shortcut to the batch file. Drag/drop while **right-clicking**, or rt-click, and select 'new shortcut'.
+1: Install Python 3 from [here](https://www.python.org/downloads/windows/). Once done, check that you can open a python CLI prompt by typing `python` in a terminal window. If you get a bunch of text indicating the python version, then you are good to go (note it may have installed as `python3` if python2 is already installed).  
+2: Make sure you amend the batch file to use the correct python alias (`python` most likely) and the path bit (before `\start.py -f "%1"`) to wherever you deployed the code  
+3: Create a desktop shortcut to the batch file. Drag/drop while **right-clicking**, or rt-click, and select 'new shortcut'.  
 
 ### Ubuntu
-1: Amend the renamed `uploader.sh` such that the `WORKING_DIRECTORY` variable points to the location you downloaded the code into.
-2: You may need to amend the python alias if you have changed the python3 default alias to something else
-3: Amend the renamed `uploader.desktop` property `Exec=` value to reflect your deployment location. **DO NOT** remove the `/uploader.sh %U` at the end!
-4: move or copy the .desktop file to your desktop. You may need to set it to executable.
+1: Amend the renamed `uploader.sh` such that the `WORKING_DIRECTORY` variable points to the location you downloaded the code into.  
+2: You may need to amend the python alias if you have changed the python3 default alias to something else  
+3: Amend the renamed `uploader.desktop` property `Exec=` value to reflect your deployment location. **DO NOT** remove the `/uploader.sh %U` at the end!  
+4: move or copy the .desktop file to your desktop. You may need to set it to executable.  
+
+
 
 
