@@ -30,15 +30,15 @@ It's essentially three components:
 The packages imported into the code (`argparse`, `configparser`, `ftplib` and `os`) are all part of the default installation of Python3 and you should not need to install these separately.
 
 ## Setup
-1: Clone or download from the repository
-2: **Rename** the files that include `.idgames` by removing this:
+1: Clone or download from the repository  
+2: **Rename** the files that include `.idgames` by removing this:  
 
-On Windows, this file:
- - `config.idgames.ini` --> `config.ini`
+On Windows, this file:  
+ - `config.idgames.ini` --> `config.ini`  
 
-Additionally, on Ubuntu:
- - `uploader.idgames.desktop` --> `uploader.desktop`
- - `uploader.idgames.sh` --> `uploader.sh`
+Additionally, on Ubuntu:  
+ - `uploader.idgames.desktop` --> `uploader.desktop`  
+ - `uploader.idgames.sh` --> `uploader.sh`  
 
 ### General
 The renamed `config.ini` needs to be updated to include your email as the `pass=` value.
