@@ -10,7 +10,7 @@ echo $1
 cd $WORKING_DIRECTORY
 
 #Add your python3 alias here:
-python3.6 ${WORKING_DIRECTORY}start.py -f "$1"
+python3 ${WORKING_DIRECTORY}start.py -f "$1"
 
 #wait for a keypress to exit (you can comment this if you want):
 echo "Press any key to exit"
