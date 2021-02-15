@@ -54,5 +54,6 @@ All other values should be OK for uploading to the IDGames archive.
 1: Amend the renamed `uploader.sh` such that the `WORKING_DIRECTORY` variable points to the location you downloaded the code into.
 2: You may need to amend the python alias if you have changed the python3 default alias to something else
 3: Amend the renamed `uploader.desktop` property `Exec=` value to reflect your deployment location. **DO NOT** remove the `/uploader.sh %U` at the end!
+4: move or copy the .desktop file to your desktop. You may need to set it to executable.
 
 
