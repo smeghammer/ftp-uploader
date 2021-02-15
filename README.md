@@ -21,7 +21,7 @@ It's essentially three components:
 ## Requirements
  - **Python3**: Ubuntu has this by default. You will need to install on Windows from [here](https://www.python.org/downloads/windows/)
  
-The packages imported into the code (`argparse`, `configparser`, `ftplib` and `os`) are all part of the default installation of Python3 and you should not need to install these.
+The packages imported into the code (`argparse`, `configparser`, `ftplib` and `os`) are all part of the default installation of Python3 and you should not need to install these separately.
 
 ## Setup
 1: Clone or download from the repository
@@ -40,7 +40,7 @@ The renamed `config.ini` needs to be updated to include your email as the `pass=
 All other values should be OK for uploading to the IDGames archive.
 
 ### Windows
-1: Install Python 3 from [here](https://www.python.org/downloads/windows/)!!. Once done, check that you can open a python CLI prompt by typing `python` in a terminal window. If you get a bunch of text indicating the python version, then you are good to go (note it may have installed as `python3` if python2 is already installed). 
+1: Install Python 3 from [here](https://www.python.org/downloads/windows/). Once done, check that you can open a python CLI prompt by typing `python` in a terminal window. If you get a bunch of text indicating the python version, then you are good to go (note it may have installed as `python3` if python2 is already installed). 
 2: Make sure you amend the batch file to use the correct python alias (`python` most likely) and the path bit (before `\start.py -f "%1"`) to wherever you deployed the code 
 3: Create a desktop shortcut to the batch file. Drag/drop while **right-clicking**, or rt-click, and select 'new shortcut'.
 
