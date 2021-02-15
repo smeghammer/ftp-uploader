@@ -1,5 +1,5 @@
 [Desktop Entry]
 Name=Drop Over Me 2
-Exec="python3.6" "/home/silas/Deploy/ftp-uploader/FTP\ Uploader/start.py -f test3.txt"
+Exec="python3.6" "/home/username/Deploy/ftp-uploader/FTP\ Uploader/start.py -f test3.txt"
 Type=Application
 Terminal=true
