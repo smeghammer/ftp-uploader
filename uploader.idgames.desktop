@@ -1,0 +1,4 @@
+[Desktop Entry]
+Name=Drop Over Me
+Exec=gnome-terminal -e "/path/to/location/ftp-uploader/uploader.sh %U"
+Type=Application
